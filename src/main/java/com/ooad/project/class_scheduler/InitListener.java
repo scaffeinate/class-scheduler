@@ -1,10 +1,9 @@
 package com.ooad.project.class_scheduler;
 
-import ognl.OgnlRuntime;
-
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import java.util.logging.Logger;
+
+import ognl.OgnlRuntime;
 
 
 /**
