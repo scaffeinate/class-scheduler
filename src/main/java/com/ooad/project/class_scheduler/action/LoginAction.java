@@ -1,4 +1,4 @@
-package com.ooad.project.class_scheduler.actions;
+package com.ooad.project.class_scheduler.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
