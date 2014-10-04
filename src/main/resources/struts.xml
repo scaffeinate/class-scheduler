@@ -24,5 +24,9 @@
             <result name="success" type="redirect">home</result>
             <result name="error">/content/login.jsp</result>
         </action>
+        <action name="Register" class="com.ooad.project.class_scheduler.actions.RegisterAction">
+            <result name="success" type="redirect">login</result>
+            <result name="error">/content/register.jsp</result>
+        </action>
     </package>
 </struts>
