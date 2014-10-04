@@ -3,8 +3,20 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
-
-  <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
-  <constant name="struts.devMode" value="true"/>
-
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.convention.result.path" value="/WEB-INF/content/" />
+	<package name="default" extends="struts-default" namespace="/">
+        <action name="login">
+        	<result>/content/login.jsp</result>
+        </action>
+        <action name="Login" class="com.ooad.project.class_scheduler.actions.LoginAction">
+            <result name="success" type="redirect">home</result>
+            <result name="error">/content/login.jsp</result>
+        </action>	
+        <action name="home">
+        	<result>/content/home.jsp</result>
+        </action>
+    </package>
 </struts>

@@ -8,6 +8,11 @@
 </head>
 <body>
 	<h2>Class Scheduler - Login</h2>
-	<a href="login">Login</a>
+	<s:actionerror />
+	<s:form action="Login.action" method="post">
+		<s:textfield name="username"  key="global.username"></s:textfield>
+		<s:password name="password" key="global.password"></s:password>
+		<s:submit method="execute"  value="Login" />
+	</s:form>
 </body>
 </html>
