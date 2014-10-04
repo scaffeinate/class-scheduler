@@ -12,4 +12,11 @@ public class RegisterAction extends ActionSupport {
 	public String execute() {
 		return SUCCESS;
 	}
+
+	@Override
+	public void validate() {
+		// TODO Auto-generated method stub
+		super.validate();
+	}
+	
 }

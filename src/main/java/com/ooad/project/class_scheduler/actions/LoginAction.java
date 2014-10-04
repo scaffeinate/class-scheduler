@@ -15,6 +15,15 @@ public class LoginAction extends ActionSupport{
 		}
 	}
 
+	
+	@Override
+	public void validate() {
+		// TODO Auto-generated method stub
+		super.validate();
+	}
+
+
+
 	public String getUsername() {
 		return username;
 	}
