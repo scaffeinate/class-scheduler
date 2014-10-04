@@ -19,7 +19,13 @@ public class LoginAction extends ActionSupport{
 	@Override
 	public void validate() {
 		// TODO Auto-generated method stub
-		super.validate();
+		if(getUsername().length() == 0) {
+			addFieldError("username", getText("errors.username.required"));
+		}
+		
+		if(getPassword().length() == 0) {
+			addFieldError("password", getText("errors.password.required"));
+		}
 	}
 
 

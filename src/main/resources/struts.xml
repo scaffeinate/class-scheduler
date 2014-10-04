@@ -20,11 +20,12 @@
         <action name="register">
         	<result>/content/register.jsp</result>
         </action>
-        <action name="Login" class="com.ooad.project.class_scheduler.actions.LoginAction">
+        <action name="Login" class="com.ooad.project.class_scheduler.action.LoginAction">
             <result name="success" type="redirect">home</result>
+            <result name="input">/content/login.jsp</result>
             <result name="error">/content/login.jsp</result>
         </action>
-        <action name="Register" class="com.ooad.project.class_scheduler.actions.RegisterAction">
+        <action name="Register" class="com.ooad.project.class_scheduler.action.RegisterAction">
             <result name="success" type="redirect">login</result>
             <result name="error">/content/register.jsp</result>
         </action>
