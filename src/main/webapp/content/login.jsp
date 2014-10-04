@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Class Scheduler</title>
+<title>Login to Class Scheduler</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -14,5 +14,6 @@
 		<s:password name="password" key="global.password"></s:password>
 		<s:submit method="execute"  value="Login" />
 	</s:form>
+	<s:a href="register">Sign up</s:a>
 </body>
 </html>

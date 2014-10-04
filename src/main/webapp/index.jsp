@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<h2>Class Scheduler - Login</h2>
-	<a href="login">Login</a>
+	<h2>Class Scheduler</h2>
+	<s:a href="login">Login</s:a>
+	<s:a href="register">Sign up</s:a>
 </body>
 </html>
