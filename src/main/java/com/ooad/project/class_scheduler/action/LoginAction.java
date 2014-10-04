@@ -14,16 +14,15 @@ public class LoginAction extends ActionSupport{
 			return ERROR;
 		}
 	}
-
 	
 	@Override
 	public void validate() {
 		// TODO Auto-generated method stub
-		if(getUsername().length() == 0) {
+		if(getUsername().trim().length() == 0) {
 			addFieldError("username", getText("errors.username.required"));
 		}
 		
-		if(getPassword().length() == 0) {
+		if(getPassword().trim().length() == 0) {
 			addFieldError("password", getText("errors.password.required"));
 		}
 	}

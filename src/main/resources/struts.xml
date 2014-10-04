@@ -27,6 +27,7 @@
         </action>
         <action name="Register" class="com.ooad.project.class_scheduler.action.RegisterAction">
             <result name="success" type="redirect">login</result>
+            <result name="input">/content/register.jsp</result>
             <result name="error">/content/register.jsp</result>
         </action>
     </package>
