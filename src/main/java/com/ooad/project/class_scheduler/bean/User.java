@@ -6,9 +6,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name="USER")
+@Table(name="USER", uniqueConstraints = {
+		@UniqueConstraint(columnNames = "EMAIL"),
+		@UniqueConstraint(columnNames = "USERNAME") })
 
 public class User implements Serializable{
 	

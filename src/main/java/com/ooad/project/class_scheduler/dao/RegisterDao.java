@@ -6,7 +6,7 @@ import org.hibernate.Session;
 import com.ooad.project.class_scheduler.bean.User;
 import com.ooad.project.class_scheduler.util.HibernateUtil;
 
-public class Register {
+public class RegisterDao {
 	
 	private Session session;
 	
