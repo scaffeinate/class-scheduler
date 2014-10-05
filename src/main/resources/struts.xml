@@ -30,5 +30,8 @@
             <result name="input">/content/register.jsp</result>
             <result name="error">/content/register.jsp</result>
         </action>
+        <action name="Logout" class="com.ooad.project.class_scheduler.action.LogoutAction">
+            <result name="success" type="redirect">login</result>
+        </action>
     </package>
 </struts>

@@ -1,13 +1,21 @@
 package com.ooad.project.class_scheduler.action;
 
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class LoginAction extends ActionSupport{
+public class LoginAction extends ActionSupport implements SessionAware {
 	private static final long serialVersionUID = 1L;
-	private String username = "", password = "";
-
+	private String username, password;
+	private Map<String, Object> session;
+	
 	public String execute() {
 		if(this.username.equals("user123") && this.password.equals("admin123")){
+			session = ActionContext.getContext().getSession();
+			session.put("current_user", username);
 			return SUCCESS;
 		} else {
 			addActionError(getText("errors.login"));
@@ -27,8 +35,6 @@ public class LoginAction extends ActionSupport{
 		}
 	}
 
-
-
 	public String getUsername() {
 		return username;
 	}
@@ -41,4 +47,13 @@ public class LoginAction extends ActionSupport{
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+	
 }

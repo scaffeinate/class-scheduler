@@ -8,6 +8,7 @@
 </head>
 <body>
 	<h2>Class Scheduler - Login</h2>
+	<s:actionmessage />
 	<s:actionerror />
 	<s:form action="Login.action" method="post">
 		<s:textfield name="username"  key="global.username"></s:textfield>
