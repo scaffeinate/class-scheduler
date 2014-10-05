@@ -86,6 +86,20 @@
 			<artifactId>hibernate</artifactId>
 			<version>3.2.3.ga</version>
 		</dependency>
+
+		<!-- Hibernate annotation -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.3.0.ga</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<version>3.0.0.ga</version>
+		</dependency>
+
 		<!-- Hibernate library dependecy start -->
 		<dependency>
 			<groupId>dom4j</groupId>
@@ -111,7 +125,7 @@
 			<version>2.2</version>
 		</dependency>
 		<!-- Hibernate library dependecy end -->
-		
+
 		<dependency>
 			<groupId>javax.transaction</groupId>
 			<artifactId>jta</artifactId>
