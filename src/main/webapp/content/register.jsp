@@ -21,5 +21,6 @@
 		<s:submit method="execute"  value="Register" />
 	</s:form>
 	<s:a href="index">Back to Home</s:a>
+	<s:a href="login">Login</s:a>
 </body>
 </html>
