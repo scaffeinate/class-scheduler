@@ -2,10 +2,6 @@
 <web-app id="struts_blank" version="2.4">
 	<display-name>Class Scheduler</display-name>
 	<constant name="struts.action.extension" value="html" />
-	<listener>
-		<listener-class>com.ooad.project.class_scheduler.InitListener
-		</listener-class>
-	</listener>
 
 	<filter>
 		<filter-name>struts2</filter-name>

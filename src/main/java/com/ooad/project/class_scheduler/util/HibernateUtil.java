@@ -6,11 +6,7 @@ import org.hibernate.cfg.AnnotationConfiguration;
 
 public class HibernateUtil {
 
-	private static SessionFactory sessionFactory;
-	
-	public HibernateUtil(){
-		sessionFactory = constructSessionFactory();
-	}
+	private static SessionFactory sessionFactory = constructSessionFactory();
 	
 	private static SessionFactory constructSessionFactory() {
 		try {

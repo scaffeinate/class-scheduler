@@ -1,5 +1,7 @@
 package com.ooad.project.class_scheduler.action;
 
+import com.ooad.project.class_scheduler.bean.User;
+import com.ooad.project.class_scheduler.model.UserModel;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class RegisterAction extends ActionSupport {
@@ -11,9 +13,28 @@ public class RegisterAction extends ActionSupport {
 	
 	private String name, email, username, password, 
 	password_confirmation, track, school;
+	private User user;
+	private UserModel userModel;
+	
+	public RegisterAction() {
+		user = new User();
+		userModel = new UserModel();
+	}
 	
 	public String execute() {
-		return SUCCESS;
+		user.setName(name);
+		user.setEmail(email);
+		user.setUsername(username);
+		user.setPassword(password);
+		user.setTrack(track);
+		user.setSchool(school);
+		
+		if(userModel.insertData(user)) {
+			return SUCCESS;
+		} else {
+			return ERROR;
+		}
+		
 	}
 
 	@Override
@@ -97,5 +118,4 @@ public class RegisterAction extends ActionSupport {
 	public void setSchool(String school) {
 		this.school = school;
 	}
-	
 }
