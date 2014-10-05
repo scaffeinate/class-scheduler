@@ -1,5 +1,7 @@
 package com.ooad.project.class_scheduler;
 
+import java.util.Map;
+
 import org.apache.struts2.interceptor.I18nInterceptor;
 
 import com.opensymphony.xwork2.ActionInvocation;
@@ -14,7 +16,12 @@ public class LoginInterceptor extends I18nInterceptor{
 	@Override
 	public String intercept(ActionInvocation invocation) throws Exception {
 		// TODO Auto-generated method stub
-		return super.intercept(invocation);
+		Map<String, Object> session = invocation.getInvocationContext().getSession();
+		if(session == null || session.get("current_user") == null) {
+			return "login";
+		} else {
+			return invocation.invoke();
+		}
 	}
 
 	@Override

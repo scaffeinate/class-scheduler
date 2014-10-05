@@ -8,6 +8,17 @@
 	<constant name="struts.custom.i18n.resources" value="global" />
 	<constant name="struts.convention.result.path" value="/WEB-INF/content/" />
 	<package name="default" extends="struts-default" namespace="/">
+		<interceptors>
+			<interceptor name="loginInterceptor" class="com.ooad.project.class_scheduler.LoginInterceptor">
+			</interceptor>
+			<interceptor-stack name="loginStack">
+				<interceptor-ref name="loginInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<global-results>
+		 	<result name="login">/content/login.jsp</result>
+		</global-results>
 		<action name="index">
 			<result>/index.jsp</result>
 		</action>
@@ -15,6 +26,7 @@
         	<result>/content/login.jsp</result>
         </action>
         <action name="home">
+        	<interceptor-ref name="loginStack"></interceptor-ref>
         	<result>/content/home.jsp</result>
         </action>
         <action name="register">
@@ -31,7 +43,7 @@
             <result name="error">/content/register.jsp</result>
         </action>
         <action name="Logout" class="com.ooad.project.class_scheduler.action.LogoutAction">
-            <result name="success" type="redirect">login</result>
+            <result name="success">/content/login.jsp</result>
         </action>
     </package>
 </struts>
