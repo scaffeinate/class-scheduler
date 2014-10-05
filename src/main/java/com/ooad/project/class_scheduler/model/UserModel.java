@@ -1,14 +1,14 @@
 package com.ooad.project.class_scheduler.model;
 
 import com.ooad.project.class_scheduler.bean.User;
-import com.ooad.project.class_scheduler.dao.RegisterDao;
+import com.ooad.project.class_scheduler.dao.UserDao;
 
 public class UserModel {
 	
-	private RegisterDao registerUser;
+	private UserDao registerUser;
 	
 	public UserModel() {
-		registerUser = new RegisterDao();
+		registerUser = new UserDao();
 	}
 	
 	public boolean insertData(User user) {
