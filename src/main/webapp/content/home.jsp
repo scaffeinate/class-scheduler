@@ -24,6 +24,9 @@
 						<s:property value="%{user.getName()}" />
 					</span>
 				</div>
+				<div class="jumbotron">
+					<h2>This Page is a Work in progress. Please check back soon.</h2>
+				</div>
 			</div>
 		</div>
 	</div>
