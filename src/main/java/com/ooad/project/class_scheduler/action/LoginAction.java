@@ -4,16 +4,26 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.ooad.project.class_scheduler.bean.Session;
+import com.ooad.project.class_scheduler.model.UserModel;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class LoginAction extends ActionSupport implements SessionAware {
 	private static final long serialVersionUID = 1L;
 	private String username, password;
+	private Session sessionBean;
+	private UserModel userModel;
 	private Map<String, Object> session;
 	
 	public String execute() {
-		if(this.username.equals("user123") && this.password.equals("admin123")){
+		
+		sessionBean = new Session();
+		userModel = new UserModel();
+		sessionBean.setUsername(username);
+		sessionBean.setPassword(password);
+		
+		if(userModel.checkCredentials(sessionBean) != null){
 			session = ActionContext.getContext().getSession();
 			session.put("current_user", username);
 			return SUCCESS;
@@ -55,5 +65,4 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-	
 }

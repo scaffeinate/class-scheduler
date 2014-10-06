@@ -1,8 +1,9 @@
 package com.ooad.project.class_scheduler.dao;
 
+import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
-import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 import com.ooad.project.class_scheduler.bean.User;
 import com.ooad.project.class_scheduler.util.HibernateUtil;
@@ -43,20 +44,37 @@ public class UserDao {
 	}
 	
 	public User fetchUserByUsername(String username) {
-		User user = new User();
+		User user = null;
 		try {
-			session = HibernateUtil.getSessionFactory().getCurrentSession();
+			session = HibernateUtil.getSessionFactory().openSession();
 			session.beginTransaction();
-			String queryString = "from USER where username = :username"; 
-			Query query = session.createQuery(queryString);
-			query.setString("username", username);
-			user = (User) query.uniqueResult();
+			Criteria criteria = session.createCriteria(User.class);
+			criteria.add(Restrictions.eq("username", username));
+			user = (User) criteria.list().get(0);
 			session.getTransaction().commit();
 		} catch (HibernateException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			session.getTransaction().rollback();
+		} catch (IndexOutOfBoundsException ie) {
+			ie.printStackTrace();
+			session.getTransaction().rollback();
 		}
+		
 		return user;
+	}
+
+	public User checkCredentails(com.ooad.project.class_scheduler.bean.Session sessionBean) {
+		// TODO Auto-generated method stub
+		User user = fetchUserByUsername(sessionBean.getUsername());
+		session = HibernateUtil.getSessionFactory().openSession();
+		session.beginTransaction();
+		if(user != null){
+			if(user.getPassword().equals(sessionBean.getPassword())){
+				return user;
+			}
+		} 
+		
+		return null;
 	}
 }

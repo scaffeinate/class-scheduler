@@ -10,6 +10,7 @@
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">admin123</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.current_session_context_class">thread</property>
 		<mapping class="com.ooad.project.class_scheduler.bean.User"></mapping>
 	</session-factory>
 </hibernate-configuration>
