@@ -30,6 +30,7 @@ public class RegisterAction extends ActionSupport {
 		user.setSchool(school);
 		
 		if(userModel.insertData(user)) {
+			addActionMessage(getText("message.register.success"));
 			return SUCCESS;
 		} else {
 			return ERROR;

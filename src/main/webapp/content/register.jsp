@@ -52,14 +52,14 @@
 								<s:fielderror fieldName="username" cssClass="fieldError" />
 							</div>
 							<div class="form-group">
-								<s:textfield name="password" key="global.password"
-									placeholder="Password" cssClass="form-control"></s:textfield>
+								<s:password name="password" key="global.password"
+									placeholder="Password" cssClass="form-control"></s:password>
 								<s:fielderror fieldName="password" cssClass="fieldError" />
 							</div>
 							<div class="form-group">
-								<s:textfield name="password_confirmation"
+								<s:password name="password_confirmation"
 									key="global.password_confirmation"
-									placeholder="Repeat Password" cssClass="form-control"></s:textfield>
+									placeholder="Repeat Password" cssClass="form-control"></s:password>
 								<s:fielderror fieldName="password_confirmation" cssClass="fieldError" />
 							</div>
 							<s:submit method="execute" value="Register"
