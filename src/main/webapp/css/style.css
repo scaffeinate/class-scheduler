@@ -1,0 +1,22 @@
+body {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background: #f0f0f0;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.navbar-custom {
+	background-color: #252e30 !important;
+}
+
+.navbar-custom .navbar-brand {
+	color: #fff !important;
+}
+
+.navbar-custom .navbar-brand:hover {
+	color: #019c70 !important;
+}
+
+.btn-success {
+	background-color: #019c70 !important;
+}

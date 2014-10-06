@@ -1,0 +1,52 @@
+.form-panel {
+	padding: 30px !important;
+}
+
+.label {
+	color: #000 !important;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 0 !important;
+}
+
+.btn-login {
+	margin-top: 10px;
+	padding: 10px !important;
+}
+
+.form-control {
+	margin-top: 7px;
+	padding: 20px 10px;
+}
+
+#login-heading {
+	font-weight: 300;
+	margin-bottom: 35px;
+}
+
+.form-links {
+	margin-top: 15px;
+}
+
+.form-links a {
+	display: block;
+	margin-top: 5px;
+	font-weight: 600;
+}
+
+span.errorMessage {
+	display: none;
+}
+
+ul.fieldError {
+	padding: 0;
+	margin-top: 10px;
+	list-style: none;
+	border:1px solid #a94442 !important;
+}
+
+ul.fieldError > li {
+	padding: 5px;
+	background-color: #f2dede;
+	color: #a94442;
+}
