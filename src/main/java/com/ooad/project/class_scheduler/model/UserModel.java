@@ -23,4 +23,9 @@ public class UserModel {
 	public User checkCredentials(Session sessionBean) {
 		return userDao.checkCredentails(sessionBean);
 	}
+
+	public User fetchUserByUsername(String username) {
+		// TODO Auto-generated method stub
+		return userDao.fetchUserByUsername(username);
+	}
 }

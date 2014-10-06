@@ -33,7 +33,7 @@
         	<interceptor-ref name="userStack"></interceptor-ref>
         	<result>/content/login.jsp</result>
         </action>
-        <action name="home">
+        <action name="home" class="com.ooad.project.class_scheduler.action.HomeAction">
         	<interceptor-ref name="loginStack"></interceptor-ref>
         	<result>/content/home.jsp</result>
         </action>

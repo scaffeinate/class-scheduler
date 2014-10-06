@@ -1,3 +1,4 @@
+<%@page import="com.ooad.project.class_scheduler.model.UserModel"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
@@ -11,5 +12,6 @@
 </head>
 <body>
 	<s:include value="navbar.jsp"></s:include>
+	<h4>Hello <s:property value="%{user.getName()}" /></h4>
 </body>
 </html>
