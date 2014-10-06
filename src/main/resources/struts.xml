@@ -23,8 +23,8 @@
 			</interceptor-stack>
 		</interceptors>
 		<global-results>
-		 	<result name="login">/content/login.jsp</result>
-		 	<result name="home">/content/home.jsp</result>
+		 	<result name="login" type="redirect">login</result>
+		 	<result name="home" type="redirect">home</result>
 		</global-results>
 		<action name="index">
 			<result type="redirect">/index.jsp</result>
