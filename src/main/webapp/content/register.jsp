@@ -5,9 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Signup for Class Scheduler</title>
+<s:include value="assets.jsp"></s:include>
+<title>Signup - Class Scheduler</title>
 </head>
 <body>
+	<s:include value="navbar.jsp"></s:include>
 	<h2>Sign up</h2>
 	<s:actionerror />
 	<s:form action="Register.action" method="post">
