@@ -12,8 +12,6 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h2>Class Scheduler</h2>
-	<s:a href="login">Login</s:a>
-	<s:a href="register">Sign up</s:a>
+	<s:include value="content/navbar.jsp"></s:include>
 </body>
 </html>

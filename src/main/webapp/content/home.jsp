@@ -5,10 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<s:include value="assets.jsp"></s:include>
 <title>Class Scheduler</title>
 </head>
 <body>
-	Home <%= session.getAttribute("current_user") %>
-	<s:a action="Logout">Logout</s:a>
+	<s:include value="navbar.jsp"></s:include>
 </body>
 </html>

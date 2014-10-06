@@ -20,3 +20,11 @@ body {
 .btn-success {
 	background-color: #019c70 !important;
 }
+
+.nav > li a {
+	color: #fff !important;
+}
+
+.nav > li a:hover {
+	color: #019c70 !important;
+}

@@ -14,6 +14,7 @@ public class LogoutAction extends ActionSupport{
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		ActionContext.getContext().getSession().remove("current_user");
+		ActionContext.getContext().getSession().remove("login");
 		addActionMessage(getText("message.logout.success"));
 		return SUCCESS;
 	}
