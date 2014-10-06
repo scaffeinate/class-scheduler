@@ -20,7 +20,7 @@
 		 	<result name="login">/content/login.jsp</result>
 		</global-results>
 		<action name="index">
-			<result>/index.jsp</result>
+			<result type="redirect">/index.jsp</result>
 		</action>
         <action name="login">
         	<result>/content/login.jsp</result>
