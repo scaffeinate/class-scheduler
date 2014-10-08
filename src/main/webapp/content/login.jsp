@@ -24,7 +24,7 @@
 								<s:actionmessage cssStyle="list-style: none;" />
 							</div>
 						</s:if>
-						<form action="Login.action" method="post">
+						<form action="Login.action" role="form" method="post">
 							<div class="form-group">
 								<s:textfield name="username" key="global.username"
 									placeholder="Username" cssClass="form-control">
