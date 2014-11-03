@@ -14,7 +14,7 @@
 	<s:include value="navbar.jsp"></s:include>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
+			<div class="col-lg-10 col-lg-offset-1">
 				<div class="alert alert-success alert-dismissible" role="alert">
 					<button type="button" class="close" data-dismiss="alert">
 						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
@@ -24,9 +24,29 @@
 						<s:property value="%{user.getName()}" />
 					</span>
 				</div>
-				<div class="jumbotron">
-					<h2>This Page is a Work in progress. Please check back soon.</h2>
-					<s:combobox	headerKey="-1" headerValue="--- Select ---" list="fruits" name="yourFruits"/>
+				<div>
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<td>Select</td>
+								<td>Course Code</td>
+								<td>Course Name</td>
+								<td>Professor</td>
+								<td>Days</td>
+								<td>Timings</td>
+							</tr>
+						</thead>
+						<s:iterator value="courseList">
+							<tr>
+							<td><s:checkbox theme="simple" name="courseSelectionList" fieldValue="%{id}" value="false" /></td>
+								<td><s:property value="coursecode"/></td>
+								<td><s:property value="coursename"/></td>
+								<td><s:property value="professor"/></td>
+								<td><s:property value="days"/></td>
+								<td><s:property value="starttime"/> - <s:property value="endtime"/></td>							
+							</tr>
+						</s:iterator>
+					</table>
 				</div>
 			</div>
 		</div>
