@@ -19,6 +19,7 @@ public class HomeAction extends ActionSupport{
 	private Map<String, Object> session;
 	
 	private String courseParams;
+	private String searchString;
 	private ArrayList<Course> courseList;
 	private ArrayList<String> courseSelectionList;
 	
@@ -39,6 +40,15 @@ public class HomeAction extends ActionSupport{
 		this.courseSelectionList = courseSelectionList;
 	}
 
+	public String getSearchString() {
+		return searchString;
+	}
+
+	public void setSearchString(String searchString) {
+		this.searchString = searchString;
+	}
+
+	
 	public User getUser() {
 		return user;
 	}
@@ -70,6 +80,11 @@ public class HomeAction extends ActionSupport{
 		user = userModel.fetchUserByUsername((String) session.get("current_user"));
 		courseList = courseModel.fetchCourses();
 		return super.execute();
+	}
+	
+	public String searchCourses() throws Exception {
+		courseList = courseModel.searchCourses(searchString);
+		return SUCCESS;
 	}
 	
 	public String validateCourseSelection() throws Exception {

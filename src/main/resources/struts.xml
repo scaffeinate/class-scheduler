@@ -77,6 +77,10 @@
    			</result>
 			<result name="error">/content/home.jsp</result>
 		</action>
+		<action name="Home" method="searchCourses"
+			class="com.ooad.project.class_scheduler.action.HomeAction">
+   			<result name="success">/content/home.jsp</result>
+		</action>
 		<action name="Logout"
 			class="com.ooad.project.class_scheduler.action.LogoutAction">
 			<result name="success">/content/login.jsp</result>

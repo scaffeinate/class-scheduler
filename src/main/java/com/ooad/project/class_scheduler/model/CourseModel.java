@@ -19,4 +19,9 @@ public class CourseModel {
 	public ArrayList<Course> fetchSelectedCourses(ArrayList<Integer> selection) {
 		return courseDao.fetchSelectedCourses(selection);
 	}
+
+	public ArrayList<Course> searchCourses(String searchString) {
+		// TODO Auto-generated method stub
+		return courseDao.searchCourses(searchString);
+	}
 }

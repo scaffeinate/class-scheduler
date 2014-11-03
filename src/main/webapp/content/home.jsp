@@ -36,7 +36,7 @@
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="col-lg-6">
-									<s:textfield name="search" placeholder="Search Courses" cssClass="form-control"></s:textfield>
+									<s:textfield name="searchString" placeholder="Search Courses" cssClass="form-control"></s:textfield>
 								</div>
 								<div class="col-lg-6">
 									<s:submit method="searchCourses" cssClass="pull-left btn btn-default" value="Search"></s:submit>

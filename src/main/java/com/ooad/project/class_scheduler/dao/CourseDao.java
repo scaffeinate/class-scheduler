@@ -46,4 +46,20 @@ public class CourseDao {
 		}
 		return resultList;
 	}
+
+	@SuppressWarnings("unchecked")
+	public ArrayList<Course> searchCourses(String searchString) {
+		ArrayList<Course> resultList = new ArrayList<Course>();
+		try {
+			session = HibernateUtil.getSessionFactory().getCurrentSession();
+			session.beginTransaction();
+			Query query = session.createQuery("from Course c where LOWER(c.coursename) LIKE LOWER(:searchKeyword)");
+			query.setParameter("searchKeyword", "%" + searchString + "%");
+			resultList = (ArrayList<Course>) query.list();
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return resultList;
+	}
 }
