@@ -19,34 +19,38 @@
 					<button type="button" class="close" data-dismiss="alert">
 						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 					</button>
-					<span>
-						Welcome,
-						<s:property value="%{user.getName()}" />
+					<span> Welcome, <s:property value="%{user.getName()}" />
 					</span>
 				</div>
 				<div>
-					<table class="table table-striped table-bordered">
-						<thead>
-							<tr>
-								<td>Select</td>
-								<td>Course Code</td>
-								<td>Course Name</td>
-								<td>Professor</td>
-								<td>Days</td>
-								<td>Timings</td>
-							</tr>
-						</thead>
-						<s:iterator value="courseList">
-							<tr>
-							<td><s:checkbox theme="simple" name="courseSelectionList" fieldValue="%{id}" value="false" /></td>
-								<td><s:property value="coursecode"/></td>
-								<td><s:property value="coursename"/></td>
-								<td><s:property value="professor"/></td>
-								<td><s:property value="days"/></td>
-								<td><s:property value="starttime"/> - <s:property value="endtime"/></td>							
-							</tr>
-						</s:iterator>
-					</table>
+					<s:form action="Home" method="post">
+						<s:submit method="validateCourseSelection" cssClass="btn btn-success"></s:submit>
+
+						<table class="table table-striped table-bordered">
+							<thead>
+								<tr>
+									<td>Select</td>
+									<td>Course Code</td>
+									<td>Course Name</td>
+									<td>Professor</td>
+									<td>Days</td>
+									<td>Timings</td>
+								</tr>
+							</thead>
+							<s:iterator value="courseList">
+								<tr>
+									<td><s:checkbox theme="simple" name="courseSelectionList"
+											fieldValue="%{id}" value="false" /></td>
+									<td><s:property value="coursecode" /></td>
+									<td><s:property value="coursename" /></td>
+									<td><s:property value="professor" /></td>
+									<td><s:property value="days" /></td>
+									<td><s:property value="starttime" /> - <s:property
+											value="endtime" /></td>
+								</tr>
+							</s:iterator>
+						</table>
+					</s:form>
 				</div>
 			</div>
 		</div>

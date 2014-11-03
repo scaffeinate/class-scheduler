@@ -19,14 +19,24 @@ public class HomeAction extends ActionSupport{
 	private Map<String, Object> session;
 	
 	private ArrayList<Course> courseList;
+	private ArrayList<String> courseSelectionList;
 	
 	public HomeAction() {
 		userModel = new UserModel();
 		courseModel = new CourseModel();
 		courseList = new ArrayList<Course>();
+		courseSelectionList = new ArrayList<String>();
 		session = ActionContext.getContext().getSession();
 	}
 	
+	public ArrayList<String> getCourseSelectionList() {
+		return courseSelectionList;
+	}
+
+	public void setCourseSelectionList(ArrayList<String> courseSelectionList) {
+		this.courseSelectionList = courseSelectionList;
+	}
+
 	public User getUser() {
 		return user;
 	}
@@ -50,5 +60,15 @@ public class HomeAction extends ActionSupport{
 		user = userModel.fetchUserByUsername((String) session.get("current_user"));
 		courseList = courseModel.fetchCourses();
 		return super.execute();
+	}
+	
+	public String validateCourseSelection() throws Exception {
+		if(courseSelectionList.size() <= 3) {
+			return SUCCESS;
+		} else {
+			user = userModel.fetchUserByUsername((String) session.get("current_user"));
+			courseList = courseModel.fetchCourses();
+			return ERROR;
+		}
 	}
 }

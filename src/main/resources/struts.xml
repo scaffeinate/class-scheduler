@@ -51,6 +51,10 @@
             <result name="input">/content/register.jsp</result>
             <result name="error">/content/register.jsp</result>
         </action>
+        <action name="Home" method="validateCourseSelection" class="com.ooad.project.class_scheduler.action.HomeAction">
+        	<result name="success">/content/confirm-selection.jsp</result>
+        	<result name="error">/content/home.jsp</result>
+        </action>
         <action name="Logout" class="com.ooad.project.class_scheduler.action.LogoutAction">
             <result name="success">/content/login.jsp</result>
         </action>
