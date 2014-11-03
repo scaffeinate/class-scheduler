@@ -19,7 +19,6 @@ public class ForgotPasswordAction extends ActionSupport {
 
 	public ForgotPasswordAction() {
 		emailUtil = new EmailUtil();
-		emailUtil.setMailerProperties();
 	}
 
 	public String getEmail() {
@@ -33,16 +32,7 @@ public class ForgotPasswordAction extends ActionSupport {
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
-		Session session = Session.getInstance(emailUtil.getProperties(), new GmailAuthenticator("ooad.utd3@gmail.com", "adminooad"));
-		
-		Message message = new MimeMessage(session);
-        message.setFrom(new InternetAddress("ooad.utd3@gmail.com"));
-        message.setRecipients(Message.RecipientType.TO, 
-           InternetAddress.parse(email));
-        message.setSubject("Test");
-        message.setText("Body");
-        Transport.send(message);
-        
+		emailUtil.sendForgotPassword(email, getText("messages.forgot.password"), getText("messages.forgot.text"));        
 		return SUCCESS;
 	}
 }
