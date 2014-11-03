@@ -17,6 +17,14 @@
 		<div class="row">
 			<div class="col-lg-6 col-lg-offset-3">
 				<h3>Profile</h3>
+				<s:if test="hasActionMessages()">
+					<div class="alert alert-success alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<s:actionmessage cssStyle="list-style: none;" />
+					</div>
+				</s:if>
 				<form class="form">
 					<div class="form-group">
 						<s:textfield name="name" key="global.name" placeholder="Name"
@@ -51,6 +59,15 @@
 					<s:submit method="execute" value="Update"
 						cssClass="btn btn-success btn-block btn-login" />
 				</form>
+				<br>
+				<s:if test="hasActionErrors()">
+					<div class="alert alert-danger alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<s:actionerror cssStyle="list-style: none;" />
+					</div>
+				</s:if>
 			</div>
 		</div>
 	</div>
