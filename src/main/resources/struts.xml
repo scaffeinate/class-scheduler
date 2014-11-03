@@ -85,6 +85,17 @@
    			</result>
 			<result name="error">/content/home.jsp</result>
 		</action>
+		
+		<action name="forgot-password">
+			<result>/content/forgot-password.jsp</result>
+		</action>
+		
+		<action name="ForgotPassword" class="com.ooad.project.class_scheduler.action.ForgotPasswordAction">
+			<result name="success">/content/login.jsp</result>
+			<result name="input">/content/forgot-password.jsp</result>
+			<result name="error">/content/forgot-password.jsp</result>
+		</action>
+		
 		<action name="Logout"
 			class="com.ooad.project.class_scheduler.action.LogoutAction">
 			<result name="success">/content/login.jsp</result>

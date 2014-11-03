@@ -50,7 +50,7 @@
 							</div>
 						</s:if>
 						<div class="form-links">
-							<a href="#">Forgot Password?</a>
+							<s:a href="forgot-password">Forgot Password?</s:a>
 							<s:a href="register">Sign up</s:a>
 						</div>
 					</div>
