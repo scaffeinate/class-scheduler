@@ -18,8 +18,10 @@ public class HomeAction extends ActionSupport{
 	private CourseModel courseModel;
 	private Map<String, Object> session;
 	
+	private String courseParams;
 	private ArrayList<Course> courseList;
 	private ArrayList<String> courseSelectionList;
+	
 	
 	public HomeAction() {
 		userModel = new UserModel();
@@ -54,6 +56,14 @@ public class HomeAction extends ActionSupport{
 		this.courseList = courseList;
 	}
 
+	public String getCourseParams() {
+		return courseParams;
+	}
+
+	public void setCourseParams(String courseParams) {
+		this.courseParams = courseParams;
+	}
+	
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
@@ -74,6 +84,17 @@ public class HomeAction extends ActionSupport{
 			addActionError(getText("errors.course.limit"));
 			return ERROR;
 		} else {
+			StringBuilder strBuilder = new StringBuilder();
+			int i=0;
+			for(String str:courseSelectionList) {
+				i++;
+				strBuilder.append(str);
+				if(i != courseSelectionList.size())
+					strBuilder.append("&");
+			}
+			
+			setCourseParams(strBuilder.toString());
+			
 			return SUCCESS;
 		}
 	}

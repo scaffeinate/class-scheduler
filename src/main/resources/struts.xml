@@ -9,54 +9,69 @@
 	<constant name="struts.convention.result.path" value="/WEB-INF/content/" />
 	<package name="default" extends="struts-default" namespace="/">
 		<interceptors>
-			<interceptor name="loginInterceptor" class="com.ooad.project.class_scheduler.LoginInterceptor">
+			<interceptor name="loginInterceptor"
+				class="com.ooad.project.class_scheduler.LoginInterceptor">
 			</interceptor>
 			<interceptor-stack name="loginStack">
 				<interceptor-ref name="loginInterceptor"></interceptor-ref>
 				<interceptor-ref name="defaultStack"></interceptor-ref>
 			</interceptor-stack>
-			<interceptor name="userInterceptor" class="com.ooad.project.class_scheduler.UserInterceptor">
+			<interceptor name="userInterceptor"
+				class="com.ooad.project.class_scheduler.UserInterceptor">
 			</interceptor>
 			<interceptor-stack name="userStack">
 				<interceptor-ref name="userInterceptor"></interceptor-ref>
 				<interceptor-ref name="defaultStack"></interceptor-ref>
 			</interceptor-stack>
 		</interceptors>
+		
 		<global-results>
-		 	<result name="login" type="redirect">login</result>
-		 	<result name="home" type="redirect">home</result>
+			<result name="login" type="redirect">login</result>
+			<result name="home" type="redirect">home</result>
 		</global-results>
 		<action name="index">
 			<result type="redirect">/index.jsp</result>
 		</action>
-        <action name="login">
-        	<interceptor-ref name="userStack"></interceptor-ref>
-        	<result>/content/login.jsp</result>
-        </action>
-        <action name="home" class="com.ooad.project.class_scheduler.action.HomeAction">
-        	<interceptor-ref name="loginStack"></interceptor-ref>
-        	<result>/content/home.jsp</result>
-        </action>
-        <action name="register">
-        	<interceptor-ref name="userStack"></interceptor-ref>
-        	<result>/content/register.jsp</result>
-        </action>
-        <action name="Login" class="com.ooad.project.class_scheduler.action.LoginAction">
-            <result name="success" type="redirect">home</result>
-            <result name="input">/content/login.jsp</result>
-            <result name="error">/content/login.jsp</result>
-        </action>
-        <action name="Register" class="com.ooad.project.class_scheduler.action.RegisterAction">
-            <result name="success">/content/login.jsp</result>
-            <result name="input">/content/register.jsp</result>
-            <result name="error">/content/register.jsp</result>
-        </action>
-        <action name="Home" method="validateCourseSelection" class="com.ooad.project.class_scheduler.action.HomeAction">
-        	<result name="success">/content/confirm-selection.jsp</result>
-        	<result name="error">/content/home.jsp</result>
-        </action>
-        <action name="Logout" class="com.ooad.project.class_scheduler.action.LogoutAction">
-            <result name="success">/content/login.jsp</result>
-        </action>
-    </package>
+		<action name="login">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/content/login.jsp</result>
+		</action>
+		<action name="home"
+			class="com.ooad.project.class_scheduler.action.HomeAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result>/content/home.jsp</result>
+		</action>
+		<action name="register">
+			<interceptor-ref name="userStack"></interceptor-ref>
+			<result>/content/register.jsp</result>
+		</action>
+		<action name="confirm_selection"
+			class="com.ooad.project.class_scheduler.action.ConfirmSelectionAction">
+			<result>/content/confirm-selection.jsp</result>
+		</action>
+		<action name="Login"
+			class="com.ooad.project.class_scheduler.action.LoginAction">
+			<result name="success" type="redirect">home</result>
+			<result name="input">/content/login.jsp</result>
+			<result name="error">/content/login.jsp</result>
+		</action>
+		<action name="Register"
+			class="com.ooad.project.class_scheduler.action.RegisterAction">
+			<result name="success">/content/login.jsp</result>
+			<result name="input">/content/register.jsp</result>
+			<result name="error">/content/register.jsp</result>
+		</action>
+		<action name="Home" method="validateCourseSelection"
+			class="com.ooad.project.class_scheduler.action.HomeAction">
+   			<result name="success" type="redirectAction">
+   				<param name="actionName">confirm_selection</param>
+        		<param name="itemId">%{courseParams}</param>
+   			</result>
+			<result name="error">/content/home.jsp</result>
+		</action>
+		<action name="Logout"
+			class="com.ooad.project.class_scheduler.action.LogoutAction">
+			<result name="success">/content/login.jsp</result>
+		</action>
+	</package>
 </struts>
