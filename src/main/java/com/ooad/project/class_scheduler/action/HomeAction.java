@@ -82,11 +82,6 @@ public class HomeAction extends ActionSupport{
 		return super.execute();
 	}
 	
-	public String searchCourses() throws Exception {
-		courseList = courseModel.searchCourses(searchString);
-		return SUCCESS;
-	}
-	
 	public String validateCourseSelection() throws Exception {
 		
 		user = userModel.fetchUserByUsername((String) session.get("current_user"));
