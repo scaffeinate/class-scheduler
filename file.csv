@@ -1,0 +1,82 @@
+ID,COURSECODE,COURSENAME,PROFESSOR,STARTTIME,ENDTIME,DAYS,INTAKE_COUNT,AVAILABILITY,CLASS_LEVEL,CLASS_CREDITS
+1,cs5333.002.14f,Discrete Structures ,Yvo Desmedt,10:00am,11:15am,MF,75,64,5333 ,3
+2,cs5333.001.14f,Discrete Structures ,Si Zheng,11:30am,12:45pm,Tues & Thurs,75,85,5333 ,3
+3,cs5343.002.14f,Algorithm Analysis and Data Structures ,Neeraj Gupta,8:30am,9:45am,Tues & Thurs,60,62,5343 ,3
+4,cs5343.001.14f,Algorithm Analysis and Data Structures ,Greg Ozbirn,1:00pm,2:15pm,Mon & Wed,65,67,5343 ,3
+5,cs5348.001.14f,Operating Systems Concepts ,Michael Christiansen,2:30pm,3:45pm,Tues & Thurs,60,79,5348 ,3
+6,cs5349.001.14f,Automata Theory ,William Pervin,8:30am,9:45am,Tues & Thurs,40,36,5349 ,3
+7,cs5390.001.14f,Computer Networks ,Nhut Nguyen,8:30am,9:45am,Tues & Thurs,60,60,5390 ,3
+8,cs5390.002.14f,Computer Networks ,Khiem Le,2:30pm,3:45pm,Tues & Thurs,40,17,5390 ,3
+9,cs6301.010.14f,Special Topics in Computer Science ,Xiaohu Guo,1:00pm,2:15pm,Mon & Wed,50,34,6301 ,3
+10,cs6301.502.14f,Special Topics in Computer Science ,Jeffrey Partyka,7:00pm,8:15pm,Mon & Wed,70,62,6301 ,3
+11,cs6301.007.14f,Special Topics in Computer Science ,Nurcan Yuruk,1:00pm,3:45pm,Fri,60,58,6301 ,3
+12,cs6301.001.14f,Special Topics in Computer Science ,Balakrishnan Prabhakaran,10:00am,11:15am,Mon & Wed,40,21,6301 ,3
+13,cs6301.005.14f,Special Topics in Computer Science ,Kevin Hamlen,1:00pm,2:15pm,Mon & Wed,40,15,6301 ,3
+14,cs6301.009.14f,Special Topics in Computer Science ,Mark Paulk,2:30pm,3:45pm,Mon & Wed,60,58,6301 ,3
+15,cs6301.501.14f,Special Topics in Computer Science ,Mithun Balakrishna,6:00pm,8:45pm,Fri,60,61,6301 ,3
+16,cs6301.003.14f,Special Topics in Computer Science ,Neeraj Mittal,11:30am,12:45pm,Mon & Wed,40,7,6301 ,3
+17,cs6301.014.14f,Special Topics in Computer Science ,Ryan McMahan,2:30pm,3:45pm,Tues & Thurs,40,29,6301 ,3
+18,cs6301.011.14f,Special Topics in Computer Science ,Latifur Khan,4:00pm,5:15pm,Mon & Wed,75,131,6301 ,3
+19,cs6301.012.14f,Special Topics in Computer Science ,Paul Fishwick,4:00pm,5:15pm,Mon & Wed,25,7,6301 ,3
+20,cs6301.008.14f,Special Topics in Computer Science ,Alixandre Minden,4:00pm,6:45pm,Fri,40,36,6301 ,3
+21,cs6301.013.14f,Special Topics in Computer Science ,Balaji Raghavachari,8:30am,9:45am,Mon & Wed,70,59,6301 ,3
+22,cs6301.015.14f,Special Topics in Computer Science ,John Cole,8:30am,9:45am,Mon & Wed,75,46,6301 ,3
+23,cs6301.016.14f,Special Topics in Computer Science ,Balaji Raghavachari,8:30am,9:45am,Tues & Thurs,70,65,6301 ,3
+24,cs6301.022.14f,Special Topics in Computer Science ,John Cole,11:30am,12:45pm,Mon & Wed,70,50,6301 ,3
+25,cs6301.021.14f,Special Topics in Computer Science ,William Semper,8:30am,9:45am,Mon & Wed,120,107,6301 ,3
+26,cs6301.023.14f,Special Topics in Computer Science ,Nurcan Yuruk,2:30pm,5:15pm,Sat,60,64,6301 ,3
+27,cs6304.001.14f,Computer Architecture ,Georgios Makris,10:00am,11:15am,Tues & Thurs,60,59,6304 ,3
+28,cs6304.501.14f,Computer Architecture ,Myoungsoo Jung,5:30pm,6:45pm,Mon & Wed,60,60,6304 ,3
+29,cs6320.001.14f,Natural Language Processing ,Yang Liu,1:00pm,2:15pm,Tues & Thurs,60,55,6320 ,3
+30,cs6322.001.14f,Information Retrieval ,Sanda Harabagiu,4:00pm,5:15pm,Mon & Wed,60,53,6322 ,3
+31,cs6322.501.14f,Information Retrieval ,Sanda Harabagiu,5:30pm,6:45pm,Mon & Wed,60,58,6322 ,3
+32,cs6325.001.14f,Introduction to Bioinformatics ,Sergey Bereg,4:00pm,5:15pm,Mon & Wed,70,38,6325 ,3
+33,cs6343.001.14f,Cloud Computing ,I-Ling Yen,1:00pm,3:45pm,Fri,60,41,6343 ,3
+34,cs6348.001.14f,Data and Applications Security ,Bhavani Thuraisingham,10:00am,12:45pm,Fri,70,64,6348 ,3
+35,cs6349.001.14f,Network Security ,Kamil Sarac,11:30am,12:45pm,Mon & Wed,60,55,6349 ,3
+36,cs6352.001.14f,Performance of Computer Systems and Networks ,Jason Jue,1:00pm,2:15pm,Tues & Thurs,60,54,6352 ,3
+37,cs6356.501.14f,"Software Maintenance, Evolution, and Re-Engineering ",Andrian Marcus,5:30pm,6:45pm,Mon & Wed,68,14,6356 ,3
+38,cs6359.002.14f,Object-Oriented Analysis and Design ,Mehra Nouroz Borazjany,8:30am,9:45am,Mon & Wed,70,42,6359 ,3
+39,cs6359.001.14f,Object-Oriented Analysis and Design ,Ebenezer Oladimeji,4:00pm,5:15pm,Mon & Wed,70,31,6359 ,3
+40,cs6359.003.14f,Object-Oriented Analysis and Design ,Mehra Nouroz Borazjany,1:00pm,2:15pm,Mon & Wed,70,40,6359 ,3
+41,cs6360.501.14f,Database Design ,Chris Davis,8:30pm,9:45pm,Tues & Thurs,75,76,6360 ,3
+42,cs6360.002.14f,Database Design ,Chris Davis,4:00pm,5:15pm,Mon & Wed,75,72,6360 ,3
+43,cs6360.003.14f,Database Design ,Murat Kantarcioglu,10:00am,12:45pm,Fri,60,46,6360 ,3
+44,cs6360.001.14f,Database Design ,Wei Wu,1:00pm,2:15pm,Mon & Wed,70,58,6360 ,3
+45,cs6360.502.14f,Database Design ,Nurcan Yuruk,5:30pm,6:45pm,Tues & Thurs,60,54,6360 ,3
+46,cs6360.004.14f,Database Design ,Nurcan Yuruk,1:00pm,2:15pm,Tues & Thurs,75,55,6360 ,3
+47,cs6361.501.14f,Advanced Requirements Engineering ,Bhanu Kapoor,7:00pm,8:15pm,Mon & Wed,65,61,6361 ,3
+48,cs6362.001.14f,Advanced Software Architecture and Design ,Lawrence Chung,1:00pm,2:15pm,Tues & Thurs,60,13,6362 ,3
+49,cs6363.004.14f,Design and Analysis of Computer Algorithms ,Ramaswamy Chandrasekaran,10:00am,11:15am,Tues & Thurs,70,50,6363 ,3
+50,cs6363.001.14f,Design and Analysis of Computer Algorithms ,Ivan Sudborough,4:00pm,5:15pm,Tues & Thurs,70,65,6363 ,3
+51,cs6363.002.14f,Design and Analysis of Computer Algorithms ,Dung Huynh,10:00am,11:15am,Mon & Wed,60,47,6363 ,3
+52,cs6363.003.14f,Design and Analysis of Computer Algorithms ,Ding Du,1:00pm,2:15pm,Mon & Wed,60,53,6363 ,3
+53,cs6363.005.14f,Design and Analysis of Computer Algorithms ,Balaji Raghavachari,2:30pm,3:45pm,Mon & Wed,40,36,6363 ,3
+54,cs6364.002.14f,Artificial Intelligence ,Dan Moldovan,4:00pm,6:45pm,Fri,40,38,6364 ,3
+55,cs6364.001.14f,Artificial Intelligence ,Mithun Balakrishna,2:00pm,4:45pm,Sat,70,40,6364 ,3
+56,cs6366.001.14f,Computer Graphics ,Kang Zhang,10:00am,12:45pm,Fri,60,33,6366 ,3
+57,cs6367.001.14f,"Software Testing, Validation and Verification ",Weichen Wong,10:00am,12:45pm,Fri,65,51,6367 ,3
+58,cs6368.001.14f,Telecommunication Network Management ,Khiem Le,11:30am,12:45pm,Tues & Thurs,65,8,6368 ,3
+59,cs6371.001.14f,Advanced Programming Languages ,Gopal Gupta,11:30am,12:45pm,Mon & Wed,60,46,6371 ,3
+60,cs6375.002.14f,Machine Learning ,Vibhav Gogate,11:30am,12:45pm,Mon & Wed,60,46,6375 ,3
+61,cs6375.001.14f,Machine Learning ,Haim Schweitzer,4:00pm,6:45pm,Fri,120,118,6375 ,3
+62,cs6377.020.14f,Introduction to Cryptography ,Yvo Desmedt,1:00pm,2:15pm,MF,30,10,6377 ,3
+63,cs6378.002.14f,Advanced Operating Systems ,Neeraj Mittal,2:30pm,3:45pm,Mon & Wed,60,46,6378 ,3
+64,cs6378.001.14f,Advanced Operating Systems ,Ravi Prakash,8:30am,9:45am,Tues & Thurs,60,34,6378 ,3
+65,cs6380.001.14f,Distributed Computing ,Subbarayan Venkatesan,10:00am,11:15am,Tues & Thurs,50,33,6380 ,3
+66,cs6385.001.14f,Algorithmic Aspects of Telecommunication Networks ,Andras Farago,8:30am,9:45am,Mon & Wed,60,56,6385 ,3
+67,cs6385.002.14f,Algorithmic Aspects of Telecommunication Networks ,Neeraj Gupta,7:00pm,8:15pm,Mon & Wed,60,20,6385 ,3
+68,cs6386.501.14f,Telecommunication Software Design ,Nhut Nguyen,7:00pm,8:15pm,Tues & Thurs,60,39,6386 ,3
+69,cs6387.001.14f,Advanced Software Engineering Project ,Bhanu Kapoor,2:00pm,4:45pm,Sat,60,27,6387 ,3
+70,cs6390.003.14f,Advanced Computer Networks ,Neeraj Gupta,11:30am,12:45pm,Mon & Wed,60,54,6390 ,3
+71,cs6390.001.14f,Advanced Computer Networks ,Kamil Sarac,10:00am,11:15am,Mon & Wed,65,64,6390 ,3
+72,cs6390.002.14f,Advanced Computer Networks ,Jorge Cobb,2:30pm,3:45pm,Tues & Thurs,66,34,6390 ,3
+73,cs6392.001.14f,Mobile Computing Systems ,Ravi Prakash,1:00pm,2:15pm,Tues & Thurs,60,14,6392 ,3
+74,cs6396.001.14f,Real-Time Systems ,Cong Liu,4:00pm,6:45pm,Fri,40,25,6396 ,3
+75,cs7301.007.14f,Recent Advances in Computing ,Ding Du,8:30am,9:45am,Tues & Thurs,30,3,7301 ,3
+76,cs7301.004.14f,Recent Advances in Computing ,Wei Wu,1:00pm,3:45pm,Tues,30,7,7301 ,3
+77,cs7301.005.14f,Recent Advances in Computing ,Vibhav Gogate,1:00pm,3:45pm,Fri,30,17,7301 ,3
+78,cs7301.008.14f,Recent Advances in Computing ,Kang Zhang,4:00pm,6:45pm,Fri,30,2,7301 ,3
+79,cs7301.009.14f,Recent Advances in Computing ,Latifur Khan,10:00am,12:45pm,Wed,30,10,7301 ,3
+80,cs7301.012.14f,Recent Advances in Computing ,Alvaro Cardenas,2:30pm,5:15pm,Fri,30,5,7301 ,3
+81,cs7301.011.14f,Recent Advances in Computing ,Weichen Wong,9:00am,11:45am,Sat,30,6,7301 ,3
