@@ -32,35 +32,50 @@
 							<s:actionerror cssStyle="list-style: none;" />
 						</div>
 					</s:if>
-					<s:form action="Home" method="post">
-						<s:submit method="validateCourseSelection"
-							cssClass="btn btn-success"></s:submit>
-
-						<table class="table table-striped table-bordered">
-							<thead>
-								<tr>
-									<td>Select</td>
-									<td>Course Code</td>
-									<td>Course Name</td>
-									<td>Professor</td>
-									<td>Days</td>
-									<td>Timings</td>
-								</tr>
-							</thead>
-							<s:iterator value="courseList">
-								<tr>
-									<td><s:checkbox theme="simple" name="courseSelectionList"
-											fieldValue="%{id}" value="false" /></td>
-									<td><s:property value="coursecode" /></td>
-									<td><s:property value="coursename" /></td>
-									<td><s:property value="professor" /></td>
-									<td><s:property value="days" /></td>
-									<td><s:property value="starttime" /> - <s:property
-											value="endtime" /></td>
-								</tr>
-							</s:iterator>
-						</table>
-					</s:form>
+					<form action="Home" method="post">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="col-lg-6">
+									<s:textfield name="search" placeholder="Search Courses" cssClass="form-control"></s:textfield>
+								</div>
+								<div class="col-lg-6">
+									<s:submit method="searchCourses" cssClass="pull-left btn btn-default" value="Search"></s:submit>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<s:submit method="validateCourseSelection"
+									cssClass="btn btn-primary" value="Next"></s:submit>
+							</div>
+						</div>
+						<br>
+						<br>
+						<div class="row">
+							<table class="table table-striped table-bordered">
+								<thead>
+									<tr>
+										<td>Select</td>
+										<td>Course Code</td>
+										<td>Course Name</td>
+										<td>Professor</td>
+										<td>Days</td>
+										<td>Timings</td>
+									</tr>
+								</thead>
+								<s:iterator value="courseList">
+									<tr>
+										<td><s:checkbox theme="simple" name="courseSelectionList"
+												fieldValue="%{id}" value="false" /></td>
+										<td><s:property value="coursecode" /></td>
+										<td><s:property value="coursename" /></td>
+										<td><s:property value="professor" /></td>
+										<td><s:property value="days" /></td>
+										<td><s:property value="starttime" /> - <s:property
+												value="endtime" /></td>
+									</tr>
+								</s:iterator>
+							</table>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
