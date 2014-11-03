@@ -50,6 +50,9 @@
 			<result name="success">/content/confirm-selection.jsp</result>
 			<result name="error">/content/confirm-selection.jsp</result>
 		</action>
+		<action name="RegisterCourse">
+			<result>/content/register-course.jsp</result>
+		</action>
 		<action name="profile" class="com.ooad.project.class_scheduler.action.ProfileAction">
 			<result>/content/profile.jsp</result>
 		</action>

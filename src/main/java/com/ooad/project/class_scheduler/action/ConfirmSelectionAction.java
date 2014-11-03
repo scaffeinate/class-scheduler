@@ -52,6 +52,7 @@ public class ConfirmSelectionAction extends ActionSupport {
 			addActionError(getText("errors.course.conflict"));
 			return ERROR;
 		} else {
+			addActionMessage(getText("errors.course.success"));
 			return SUCCESS;
 		}
 	}

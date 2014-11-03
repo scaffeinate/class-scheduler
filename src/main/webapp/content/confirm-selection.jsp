@@ -50,6 +50,14 @@
 						</div>
 					</div>
 				</form>
+				<s:if test="hasActionMessages()">
+					<div class="alert alert-success alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<s:actionmessage cssStyle="list-style: none;" />
+					</div>
+				</s:if>
 				<s:if test="hasActionErrors()">
 					<div class="alert alert-danger alert-dismissible" role="alert">
 						<button type="button" class="close" data-dismiss="alert">
