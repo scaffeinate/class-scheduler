@@ -56,7 +56,7 @@
 							placeholder="Password" cssClass="form-control"></s:password>
 						<s:fielderror fieldName="password" cssClass="fieldError" />
 					</div>
-					<s:submit method="execute" value="Update"
+					<s:submit method="updateProfile" value="Update"
 						cssClass="btn btn-success btn-block btn-login" />
 				</form>
 				<br>

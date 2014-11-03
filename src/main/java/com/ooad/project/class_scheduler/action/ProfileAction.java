@@ -99,8 +99,10 @@ public class ProfileAction extends ActionSupport {
 		user.setTrack(track);
 		user.setSchool(school);
 		if(isValid() && userModel.updateUser(user)){
+			addActionMessage(getText("message.register.success"));
 			return SUCCESS;
 		} else {
+			addActionError(getText("message.register.error"));
 			return ERROR;
 		}
 	}
