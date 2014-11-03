@@ -63,12 +63,18 @@ public class HomeAction extends ActionSupport{
 	}
 	
 	public String validateCourseSelection() throws Exception {
-		if(courseSelectionList.size() <= 3) {
-			return SUCCESS;
-		} else {
-			user = userModel.fetchUserByUsername((String) session.get("current_user"));
-			courseList = courseModel.fetchCourses();
+		
+		user = userModel.fetchUserByUsername((String) session.get("current_user"));
+		courseList = courseModel.fetchCourses();
+		
+		if(courseSelectionList.size() == 0) {
+			addActionError(getText("errors.course.select"));
 			return ERROR;
+		} else if(courseSelectionList.size() >= 4) {
+			addActionError(getText("errors.course.limit"));
+			return ERROR;
+		} else {
+			return SUCCESS;
 		}
 	}
 }

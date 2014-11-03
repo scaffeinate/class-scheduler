@@ -23,8 +23,18 @@
 					</span>
 				</div>
 				<div>
+					<br>
+					<s:if test="hasActionErrors()">
+						<div class="alert alert-danger alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert">
+								<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+							</button>
+							<s:actionerror cssStyle="list-style: none;" />
+						</div>
+					</s:if>
 					<s:form action="Home" method="post">
-						<s:submit method="validateCourseSelection" cssClass="btn btn-success"></s:submit>
+						<s:submit method="validateCourseSelection"
+							cssClass="btn btn-success"></s:submit>
 
 						<table class="table table-striped table-bordered">
 							<thead>
