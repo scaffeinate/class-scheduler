@@ -15,4 +15,8 @@ public class CourseModel {
 	public ArrayList<Course> fetchCourses() {
 		return courseDao.fetchCourses();
 	}
+	
+	public ArrayList<Course> fetchSelectedCourses(ArrayList<Integer> selection) {
+		return courseDao.fetchSelectedCourses(selection);
+	}
 }

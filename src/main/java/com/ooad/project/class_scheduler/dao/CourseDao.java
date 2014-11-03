@@ -3,6 +3,7 @@ package com.ooad.project.class_scheduler.dao;
 import java.util.ArrayList;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 import com.ooad.project.class_scheduler.bean.Course;
@@ -27,6 +28,22 @@ public class CourseDao {
 			e.printStackTrace();
 		}
 		
+		return resultList;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public ArrayList<Course> fetchSelectedCourses(ArrayList<Integer> values) {
+		ArrayList<Course> resultList = new ArrayList<Course>();
+		try {
+			session = HibernateUtil.getSessionFactory().getCurrentSession();
+			session.beginTransaction();
+			Query query = session.createQuery("from Course c where c.id IN (:values)");
+			query.setParameterList("values", values);
+			resultList = (ArrayList<Course>) query.list();
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return resultList;
 	}
 }

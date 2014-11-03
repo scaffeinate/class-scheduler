@@ -11,6 +11,46 @@
 <title>Class Scheduler</title>
 </head>
 <body>
-	
+	<s:include value="navbar.jsp"></s:include>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h3>Selected Courses</h3>
+				<hr>
+				<table class="table table-striped table-bordered">
+					<thead>
+						<tr>
+							<td>Course Code</td>
+							<td>Course Name</td>
+							<td>Professor</td>
+							<td>Days</td>
+							<td>Timings</td>
+						</tr>
+					</thead>
+					<s:iterator value="selectedCourses">
+						<tr>
+
+							<td><s:property value="coursecode" /></td>
+							<td><s:property value="coursename" /></td>
+							<td><s:property value="professor" /></td>
+							<td><s:property value="days" /></td>
+							<td><s:property value="starttime" /> - <s:property
+									value="endtime" /></td>
+						</tr>
+					</s:iterator>
+				</table>
+				<form>
+					<div class="row">
+						<div class="col-lg-6">
+							<s:submit value="Register" cssClass="btn btn-primary"></s:submit>
+						</div>
+						<div class="col-lg-6">
+							<s:a href="home" cssClass="btn btn-default">Cancel</s:a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
