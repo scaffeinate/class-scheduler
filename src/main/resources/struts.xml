@@ -78,8 +78,8 @@
 			class="com.ooad.project.class_scheduler.action.SearchAction">
    			<result name="success">/content/home.jsp</result>
 		</action>
-		<action name="ValidateSelection" method="validateCourseSelection"
-			class="com.ooad.project.class_scheduler.action.HomeAction">
+		<action name="ValidateSelection"
+			class="com.ooad.project.class_scheduler.action.ValidateCourseSelectionAction">
    			<result name="success" type="redirectAction">
    				<param name="actionName">confirm_selection</param>
         		<param name="itemId">%{courseParams}</param>
