@@ -91,7 +91,6 @@ public class HomeAction extends ActionSupport{
 		
 		user = userModel.fetchUserByUsername((String) session.get("current_user"));
 		courseList = courseModel.fetchCourses();
-		
 		if(courseSelectionList.size() == 0) {
 			addActionError(getText("errors.course.select"));
 			return ERROR;

@@ -49,6 +49,11 @@
 			class="com.ooad.project.class_scheduler.action.ConfirmSelectionAction">
 			<result>/content/confirm-selection.jsp</result>
 		</action>
+		<!-- <action name="confirm_selection" method="detectConflicts"
+			class="com.ooad.project.class_scheduler.action.ConfirmSelectionAction">
+			<result name="success">/content/register-success.jsp</result>
+			<result name="error">/content/confirm-selection.jsp</result>
+		</action> -->
 		<action name="profile" class="com.ooad.project.class_scheduler.action.ProfileAction">
 			<result>/content/profile.jsp</result>
 		</action>
@@ -69,17 +74,17 @@
 			<result name="input">/content/register.jsp</result>
 			<result name="error">/content/register.jsp</result>
 		</action>
-		<action name="Home" method="validateCourseSelection"
+		<action name="Search" method="searchCourses"
+			class="com.ooad.project.class_scheduler.action.HomeAction">
+   			<result name="success">/content/home.jsp</result>
+		</action>
+		<action name="ValidateSelection" method="validateCourseSelection"
 			class="com.ooad.project.class_scheduler.action.HomeAction">
    			<result name="success" type="redirectAction">
    				<param name="actionName">confirm_selection</param>
         		<param name="itemId">%{courseParams}</param>
    			</result>
 			<result name="error">/content/home.jsp</result>
-		</action>
-		<action name="Home" method="searchCourses"
-			class="com.ooad.project.class_scheduler.action.HomeAction">
-   			<result name="success">/content/home.jsp</result>
 		</action>
 		<action name="Logout"
 			class="com.ooad.project.class_scheduler.action.LogoutAction">

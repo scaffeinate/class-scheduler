@@ -43,7 +43,7 @@ public class ConfirmSelectionAction extends ActionSupport {
 		for(String str:itemId.split("&")){
 			values.add(Integer.parseInt(str));
 		}
-		
+		System.out.println(values.size());
 		selectedCourses = courseModel.fetchSelectedCourses(values);
 		
 		return super.execute();

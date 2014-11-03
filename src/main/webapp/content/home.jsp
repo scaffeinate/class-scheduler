@@ -32,23 +32,25 @@
 							<s:actionerror cssStyle="list-style: none;" />
 						</div>
 					</s:if>
-					<form action="Home" method="post">
+					<form action="Search" method="post">
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="col-lg-6">
-									<s:textfield name="searchString" placeholder="Search Courses" cssClass="form-control"></s:textfield>
+									<s:textfield name="searchString" placeholder="Search Courses"
+										cssClass="form-control"></s:textfield>
 								</div>
 								<div class="col-lg-6">
-									<s:submit method="searchCourses" cssClass="pull-left btn btn-default" value="Search"></s:submit>
+									<s:submit cssClass="pull-left btn btn-default"
+										value="Search"></s:submit>
 								</div>
 							</div>
 							<div class="col-lg-6">
-								<s:submit method="validateCourseSelection"
-									cssClass="btn btn-primary" value="Next"></s:submit>
 							</div>
 						</div>
-						<br>
-						<br>
+					</form>
+					<form action="ValidateSelection.action" method="post">
+						<s:submit cssClass="btn btn-primary" value="Next"></s:submit>
+						<br> <br>
 						<div class="row">
 							<table class="table table-striped table-bordered">
 								<thead>

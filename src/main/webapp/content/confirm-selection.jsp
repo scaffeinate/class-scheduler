@@ -39,10 +39,10 @@
 						</tr>
 					</s:iterator>
 				</table>
-				<form>
+				<form action="confirm-selection" method="post">
 					<div class="row">
 						<div class="col-lg-6">
-							<s:submit value="Register" cssClass="btn btn-primary"></s:submit>
+							<s:submit method="detectConflicts" value="Register" cssClass="btn btn-primary"></s:submit>
 						</div>
 						<div class="col-lg-6">
 							<s:a href="home" cssClass="btn btn-default">Cancel</s:a>
