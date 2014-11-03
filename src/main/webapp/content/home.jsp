@@ -26,6 +26,7 @@
 				</div>
 				<div class="jumbotron">
 					<h2>This Page is a Work in progress. Please check back soon.</h2>
+					<s:combobox	headerKey="-1" headerValue="--- Select ---" list="fruits" name="yourFruits"/>
 				</div>
 			</div>
 		</div>
