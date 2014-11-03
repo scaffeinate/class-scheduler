@@ -77,4 +77,20 @@ public class UserDao {
 		
 		return null;
 	}
+
+	public boolean updateUser(User user) {
+		try {
+			session = HibernateUtil.getSessionFactory().openSession();
+			session.beginTransaction();
+			session.update(user);
+			session.getTransaction().commit();
+			return true;
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			session.getTransaction().rollback();
+		}
+		
+		return false;
+	}
 }

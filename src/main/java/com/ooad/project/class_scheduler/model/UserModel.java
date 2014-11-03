@@ -28,4 +28,9 @@ public class UserModel {
 		// TODO Auto-generated method stub
 		return userDao.fetchUserByUsername(username);
 	}
+
+	public boolean updateUser(User user) {
+		// TODO Auto-generated method stub
+		return userDao.updateUser(user);
+	}
 }

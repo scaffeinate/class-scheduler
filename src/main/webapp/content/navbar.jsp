@@ -10,7 +10,7 @@
 		<ul class="nav navbar-nav navbar-right">
 	      	<s:if test='%{#session.login == true}' >
 	      		<li><s:a href="home">Home</s:a></li>
-	      		<li><a href="#"><%= session.getAttribute("current_user") %></a></li>
+	      		<li><s:a href="profile"><%= session.getAttribute("current_user") %></s:a></li>
 	      		<li><s:a action="Logout">Logout</s:a></li>
 	      	</s:if>
 	      	<s:if test='%{#session.login == null}'>

@@ -49,6 +49,9 @@
 			class="com.ooad.project.class_scheduler.action.ConfirmSelectionAction">
 			<result>/content/confirm-selection.jsp</result>
 		</action>
+		<action name="profile" class="com.ooad.project.class_scheduler.action.ProfileAction">
+			<result>/content/profile.jsp</result>
+		</action>
 		<action name="Login"
 			class="com.ooad.project.class_scheduler.action.LoginAction">
 			<result name="success" type="redirect">home</result>
