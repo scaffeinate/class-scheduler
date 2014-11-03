@@ -25,7 +25,8 @@
 						<s:actionmessage cssStyle="list-style: none;" />
 					</div>
 				</s:if>
-				<form class="form">
+				<form action="Profile" class="form" method="post">
+					<s:hidden name="id"></s:hidden>
 					<div class="form-group">
 						<s:textfield name="name" key="global.name" placeholder="Name"
 							cssClass="form-control"></s:textfield>

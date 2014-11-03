@@ -52,8 +52,8 @@
 		<action name="profile" class="com.ooad.project.class_scheduler.action.ProfileAction">
 			<result>/content/profile.jsp</result>
 		</action>
-		<action name="profile" method="updateProfile" class="com.ooad.project.class_scheduler.action.ProfileAction">
-			<result name="success">/content/home.jsp</result>
+		<action name="Profile" method="updateProfile" class="com.ooad.project.class_scheduler.action.ProfileAction">
+			<result name="success" type="redirect">home</result>
 			<result name="input">/content/profile.jsp</result>
 			<result name="error">/content/profile.jsp</result>
 		</action>

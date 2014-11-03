@@ -14,8 +14,17 @@ public class ProfileAction extends ActionSupport {
 	private User user;
 	private UserModel userModel;
 	private Map<String, Object> session;
+	private int id;
 	private String name, email, username, password, track, school;
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -82,6 +91,7 @@ public class ProfileAction extends ActionSupport {
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		user = userModel.fetchUserByUsername((String) session.get("current_user"));
+		setId(user.getId());
 		setName(user.getName());
 		setEmail(user.getEmail());
 		setTrack(user.getTrack());
@@ -92,6 +102,7 @@ public class ProfileAction extends ActionSupport {
 	}
 	
 	public String updateProfile() throws Exception {
+		user.setId(id);
 		user.setName(name);
 		user.setEmail(email);
 		user.setUsername(username);
