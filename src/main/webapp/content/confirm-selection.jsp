@@ -39,16 +39,25 @@
 						</tr>
 					</s:iterator>
 				</table>
-				<form action="confirm-selection" method="post">
+				<form action="RegisterCourse.action">
+					<s:hidden value="%{itemId}"></s:hidden>
 					<div class="row">
 						<div class="col-lg-6">
-							<s:submit method="detectConflicts" value="Register" cssClass="btn btn-primary"></s:submit>
+							<s:submit value="Register" cssClass="btn btn-primary"></s:submit>
 						</div>
 						<div class="col-lg-6">
 							<s:a href="home" cssClass="btn btn-default">Cancel</s:a>
 						</div>
 					</div>
 				</form>
+				<s:if test="hasActionErrors()">
+					<div class="alert alert-danger alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<s:actionerror cssStyle="list-style: none;" />
+					</div>
+				</s:if>
 			</div>
 		</div>
 	</div>

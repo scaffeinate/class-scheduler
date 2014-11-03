@@ -47,11 +47,7 @@
 		</action>
 		<action name="confirm_selection"
 			class="com.ooad.project.class_scheduler.action.ConfirmSelectionAction">
-			<result>/content/confirm-selection.jsp</result>
-		</action>
-		<action name="DetectConflicts" method="detectConflicts"
-			class="com.ooad.project.class_scheduler.action.ConfirmSelectionAction">
-			<result name="success">/content/register-success.jsp</result>
+			<result name="success">/content/confirm-selection.jsp</result>
 			<result name="error">/content/confirm-selection.jsp</result>
 		</action>
 		<action name="profile" class="com.ooad.project.class_scheduler.action.ProfileAction">
