@@ -70,7 +70,7 @@
 										<td><s:property value="coursecode" /></td>
 										<td><s:property value="coursename" /></td>
 										<td><s:property value="professor" /></td>
-										<td><s:property value="day1" /> & <s:property value="day2" /></td>
+										<td><s:property value="day1" /> <s:if test="day2.length() != 0"> & <s:property value="day2" /></s:if></td>
 										<td><s:property value="starttime" /> - <s:property
 												value="endtime" /></td>
 									</tr>
