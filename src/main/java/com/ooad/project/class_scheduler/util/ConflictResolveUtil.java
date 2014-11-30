@@ -22,10 +22,10 @@ public class ConflictResolveUtil {
 
 	private boolean checkConflict(Course first, Course second) {
 		// TODO Auto-generated method stub
-		if(!first.getDays().equals(second.getDays()) || 
+		/*if(!first.getDays().equals(second.getDays()) || 
 				Float.parseFloat(first.getStarttime().replace(":", ".").replace("am", "").replace("pm", "")) < Float.parseFloat(second.getStarttime().replace(":", ".").replace("am", "").replace("pm", "")) || 
 				Float.parseFloat(first.getEndtime().replace(":", ".").replace("am", "").replace("pm", "")) > Float.parseFloat(second.getEndtime().replace(":", ".").replace("am", "").replace("pm", "")))
-			return false;
+			return false;*/
 		return true;
 	}
 

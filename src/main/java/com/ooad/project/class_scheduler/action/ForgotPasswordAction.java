@@ -1,13 +1,6 @@
 package com.ooad.project.class_scheduler.action;
 
-import javax.mail.Message;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-
 import com.ooad.project.class_scheduler.util.EmailUtil;
-import com.ooad.project.class_scheduler.util.GmailAuthenticator;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class ForgotPasswordAction extends ActionSupport {

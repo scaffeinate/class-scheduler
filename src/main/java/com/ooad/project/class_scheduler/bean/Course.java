@@ -17,7 +17,7 @@ public class Course implements Serializable{
 	
 	private int id, intake_count, availability, class_credits;
 	private String coursecode, coursename, professor, starttime,
-		endtime, days, class_level;
+		endtime, day1, day2, class_level;
 	
 	@Id
 	@Column(name="ID", unique=true, nullable=false)
@@ -92,14 +92,22 @@ public class Course implements Serializable{
 		this.endtime = endtime;
 	}
 	
-	@Column(name="DAYS", unique=false, nullable=false, length=20)
-	public String getDays() {
-		return days;
+	
+	@Column(name="DAY1", unique=false, nullable=false, length=10)
+	public String getDay1() {
+		return day1;
 	}
-	public void setDays(String days) {
-		this.days = days;
+	public void setDay1(String day1) {
+		this.day1 = day1;
 	}
 	
+	@Column(name="DAY2", unique=false, nullable=false, length=10)
+	public String getDay2() {
+		return day2;
+	}
+	public void setDay2(String day2) {
+		this.day2 = day2;
+	}
 	@Column(name="CLASS_LEVEL", unique=false, nullable=false, length=50)
 	public String getClass_level() {
 		return class_level;

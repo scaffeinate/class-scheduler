@@ -13,7 +13,7 @@ ID,COURSECODE,COURSENAME,PROFESSOR,STARTTIME,ENDTIME,INTAKE_COUNT,AVAILABILITY,C
 12,cs6301.001.14f,Special Topics in Computer Science ,Balakrishnan Prabhakaran,10:00am,11:15am,40,21.0,6301.0,3,Mon,Wed
 13,cs6301.005.14f,Special Topics in Computer Science ,Kevin Hamlen,1:00pm,2:15pm,40,15.0,6301.0,3,Mon,Wed
 14,cs6301.009.14f,Special Topics in Computer Science ,Mark Paulk,2:30pm,3:45pm,60,58.0,6301.0,3,Mon,Wed
-15,cs6301.501.14f,Special Topics in Computer Science ,Mithun Balakrishna,6:00pm,8:45pm,60,61.0,6301.0,3,Fri,
+15,cs6301.501.14f,Special Topics in Computer Science ,Mithun Balakrishna,6:00pm,8:45pm,60,61.0,6301.0,3,,
 16,cs6301.003.14f,Special Topics in Computer Science ,Neeraj Mittal,11:30am,12:45pm,40,7.0,6301.0,3,Mon,Wed
 17,cs6301.014.14f,Special Topics in Computer Science ,Ryan McMahan,2:30pm,3:45pm,40,29.0,6301.0,3,Tues,Thurs
 18,cs6301.011.14f,Special Topics in Computer Science ,Latifur Khan,4:00pm,5:15pm,75,131.0,6301.0,3,Mon,Wed
@@ -24,7 +24,7 @@ ID,COURSECODE,COURSENAME,PROFESSOR,STARTTIME,ENDTIME,INTAKE_COUNT,AVAILABILITY,C
 23,cs6301.016.14f,Special Topics in Computer Science ,Balaji Raghavachari,8:30am,9:45am,70,65.0,6301.0,3,Tues,Thurs
 24,cs6301.022.14f,Special Topics in Computer Science ,John Cole,11:30am,12:45pm,70,50.0,6301.0,3,Mon,Wed
 25,cs6301.021.14f,Special Topics in Computer Science ,William Semper,8:30am,9:45am,120,107.0,6301.0,3,Mon,Wed
-26,cs6301.023.14f,Special Topics in Computer Science ,Nurcan Yuruk,2:30pm,5:15pm,60,64.0,6301.0,3,Wed,
+26,cs6301.023.14f,Special Topics in Computer Science ,Nurcan Yuruk,2:30pm,5:15pm,60,64.0,6301.0,3,,
 27,cs6304.001.14f,Computer Architecture ,Georgios Makris,10:00am,11:15am,60,59.0,6304.0,3,Tues,Thurs
 28,cs6304.501.14f,Computer Architecture ,Myoungsoo Jung,5:30pm,6:45pm,60,60.0,6304.0,3,Mon,Wed
 29,cs6320.001.14f,Natural Language Processing ,Yang Liu,1:00pm,2:15pm,60,55.0,6320.0,3,Tues,Thurs
