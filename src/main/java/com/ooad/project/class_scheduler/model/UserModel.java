@@ -38,4 +38,9 @@ public class UserModel {
 		// TODO Auto-generated method stub
 		return userDao.updateUser(user);
 	}
+
+	public boolean checkConfirmed(String username) {
+		// TODO Auto-generated method stub
+		return userDao.fetchUserByUsername(username).isConfirmed();
+	}
 }

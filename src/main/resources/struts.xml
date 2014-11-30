@@ -113,6 +113,11 @@
 			<result name="error">/content/confirm-password.jsp</result>
 		</action>
 		
+		<action name="ConfirmUser" class="com.ooad.project.class_scheduler.action.ConfirmUserAction">
+			<result name="success">/content/login.jsp</result>
+			<result name="error">/content/login.jsp</result>
+		</action>
+		
 		<action name="Logout"
 			class="com.ooad.project.class_scheduler.action.LogoutAction">
 			<result name="success">/content/login.jsp</result>

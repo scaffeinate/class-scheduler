@@ -24,10 +24,15 @@ public class LoginAction extends ActionSupport implements SessionAware {
 		sessionBean.setPassword(password);
 		
 		if(userModel.checkCredentials(sessionBean) != null){
-			session = ActionContext.getContext().getSession();
-			session.put("current_user", username);
-			session.put("login", true);
-			return SUCCESS;
+			if(userModel.checkConfirmed(username)) {
+				session = ActionContext.getContext().getSession();
+				session.put("current_user", username);
+				session.put("login", true);
+				return SUCCESS;
+			} else {
+				addActionError(getText("errors.confirmation"));
+				return ERROR;
+			}
 		} else {
 			addActionError(getText("errors.login"));
 			return ERROR;

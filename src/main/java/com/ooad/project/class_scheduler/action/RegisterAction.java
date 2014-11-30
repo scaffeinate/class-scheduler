@@ -2,6 +2,8 @@ package com.ooad.project.class_scheduler.action;
 
 import com.ooad.project.class_scheduler.bean.User;
 import com.ooad.project.class_scheduler.model.UserModel;
+import com.ooad.project.class_scheduler.util.EmailUtil;
+import com.ooad.project.class_scheduler.util.EncryptUtil;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class RegisterAction extends ActionSupport {
@@ -16,9 +18,12 @@ public class RegisterAction extends ActionSupport {
 	private User user;
 	private UserModel userModel;
 	
+	private EmailUtil emailUtil;
+	
 	public RegisterAction() {
 		user = new User();
 		userModel = new UserModel();
+		emailUtil = new EmailUtil();
 	}
 	
 	public String execute() {
@@ -28,8 +33,13 @@ public class RegisterAction extends ActionSupport {
 		user.setPassword(password);
 		user.setTrack(track);
 		user.setSchool(school);
+		user.setConfirmed(false);
 		
 		if(userModel.insertData(user)) {
+			String userConfirmText = getText("message.confirm.user") +
+					"http://localhost:8080/class-scheduler/ConfirmUser?token=" + new EncryptUtil().generateBase64(email);
+		
+			emailUtil.sendForgotPassword(email, getText("message.user.confirm"), userConfirmText);
 			addActionMessage(getText("message.register.success"));
 			return SUCCESS;
 		} else {

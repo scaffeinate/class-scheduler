@@ -20,6 +20,7 @@ public class User implements Serializable{
 	private int id;
 	private String name, email, password, username,
 		track, school;
+	private boolean confirmed;
 	
 	@Id
 	@Column(name="ID", unique=true, nullable=false)
@@ -78,5 +79,14 @@ public class User implements Serializable{
 	}
 	public void setSchool(String school) {
 		this.school = school;
+	}
+	
+	@Column(name="CONFIRMED", unique=false, nullable=false)
+	public boolean isConfirmed() {
+		return confirmed;
+	}
+
+	public void setConfirmed(boolean confirmed) {
+		this.confirmed = confirmed;
 	}
 }
