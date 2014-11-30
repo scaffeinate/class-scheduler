@@ -22,13 +22,19 @@ public class EmailUtil {
 	}
 
 	private void setMailerProperties() {
-		properties.put("mail.smtp.host", "smtp.gmail.com");
-		properties.put("mail.smtp.socketFactory.port", "587");
-		properties.put("mail.smtp.starttls.enable", true);
-		/*properties.put("mail.smtp.socketFactory.class",
-				"javax.net.ssl.SSLSocketFactory");*/
-		properties.put("mail.smtp.auth", "true");
-		properties.put("mail.smtp.port", "587");
+		
+		properties.put("mail.smtp.user","ooad.utd3@gmail.com"); 
+		properties.put("mail.smtp.host", "smtp.gmail.com"); 
+		properties.put("mail.smtp.port", "25"); 
+		properties.put("mail.debug", "true"); 
+		properties.put("mail.smtp.auth", "true"); 
+		properties.put("mail.smtp.starttls.enable","true"); 
+		properties.put("mail.smtp.EnableSSL.enable","true");
+
+		properties.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");   
+		properties.setProperty("mail.smtp.socketFactory.fallback", "false");   
+		properties.setProperty("mail.smtp.port", "465");   
+		properties.setProperty("mail.smtp.socketFactory.port", "465"); 
 	}
 
 	public boolean sendForgotPassword(String email, String subject, String body) {
