@@ -28,6 +28,11 @@ public class UserModel {
 		// TODO Auto-generated method stub
 		return userDao.fetchUserByUsername(username);
 	}
+	
+	public User fetchUserByEmail(String email) {
+		// TODO Auto-generated method stub
+		return userDao.fetchUserByEmail(email);
+	}
 
 	public boolean updateUser(User user) {
 		// TODO Auto-generated method stub

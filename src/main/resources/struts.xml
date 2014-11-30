@@ -96,6 +96,23 @@
 			<result name="error">/content/forgot-password.jsp</result>
 		</action>
 		
+		<action name="ChangePassword" class="com.ooad.project.class_scheduler.action.ChangePasswordAction">
+			<result name="success" type="redirectAction">
+   				<param name="actionName">confirm_password</param>
+        		<param name="token">%{token}</param>
+   			</result>
+			<result name="error">/content/login.jsp</result>
+		</action>
+		
+		<action name="confirm_password" class="com.ooad.project.class_scheduler.action.ConfirmPasswordAction">
+			<result>/content/confirm-password.jsp</result>
+		</action>
+		
+		<action name="ConfirmPassword" method="updatePassword" class="com.ooad.project.class_scheduler.action.ConfirmPasswordAction">
+			<result name="success">/content/login.jsp</result>
+			<result name="error">/content/confirm-password.jsp</result>
+		</action>
+		
 		<action name="Logout"
 			class="com.ooad.project.class_scheduler.action.LogoutAction">
 			<result name="success">/content/login.jsp</result>
