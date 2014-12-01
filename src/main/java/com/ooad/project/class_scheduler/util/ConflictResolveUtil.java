@@ -38,6 +38,14 @@ public class ConflictResolveUtil {
 		
 		return b1 || b2 || b3;
 	}
+	
+	public ArrayList<Course> suggestedCourses(ArrayList<Course> selectedCourses) {
+		ArrayList<Course> resultList = new ArrayList<Course>();
+		
+		
+		
+		return resultList;
+	}
 
 	private boolean checkConflict(Course c1, Course c2) {
 		// TODO Auto-generated method stub
