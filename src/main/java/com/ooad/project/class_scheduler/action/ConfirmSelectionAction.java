@@ -50,6 +50,10 @@ public class ConfirmSelectionAction extends ActionSupport {
 		selectedCourses = courseModel.fetchSelectedCourses(values);
 		if(conflictResolveUtil.detectConflicts(selectedCourses)){
 			addActionError(getText("errors.course.conflict"));
+			String[] tempStr = conflictResolveUtil.getConflictsStr().split("\n");
+			for(String str:tempStr) {
+				addActionError(str);
+			}
 			return ERROR;
 		} else {
 			addActionMessage(getText("errors.course.success"));
