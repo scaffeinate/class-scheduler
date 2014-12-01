@@ -4,6 +4,8 @@ import java.util.Map;
 
 import com.ooad.project.class_scheduler.bean.User;
 import com.ooad.project.class_scheduler.model.UserModel;
+import com.ooad.project.class_scheduler.util.Validator;
+import com.ooad.project.class_scheduler.util.ValidatorUtil;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -16,6 +18,7 @@ public class ProfileAction extends ActionSupport {
 	private Map<String, Object> session;
 	private int id;
 	private String name, email, username, password, track, school;
+	private ValidatorUtil validatorUtil;
 	
 	public int getId() {
 		return id;
@@ -76,6 +79,7 @@ public class ProfileAction extends ActionSupport {
 	public ProfileAction() {
 		user = new User();
 		userModel = new UserModel();
+		validatorUtil = new ValidatorUtil(new Validator());
 		session = ActionContext.getContext().getSession();
 	}
 	
@@ -122,27 +126,27 @@ public class ProfileAction extends ActionSupport {
 		// TODO Auto-generated method stub
 		boolean valid = true;
 		
-		if(getName().trim().length() == 0) {
+		if(!validatorUtil.checkValid(getName())) {
 			addFieldError("name", getText("errors.name.required"));
 			valid = false;
 		}
-		if(getEmail().trim().length() == 0) {
+		if(!validatorUtil.checkValid(getEmail())) {
 			addFieldError("email", getText("errors.email.required"));
 			valid = false;
 		}
-		if(getTrack().trim().length() == 0) {
+		if(!validatorUtil.checkValid(getTrack())) {
 			addFieldError("track", getText("errors.track.required"));
 			valid = false;
 		}
-		if(getSchool().trim().length() == 0) {
+		if(!validatorUtil.checkValid(getSchool())) {
 			addFieldError("school", getText("errors.school.required"));
 			valid = false;
 		}
-		if(getUsername().trim().length() == 0) {
+		if(!validatorUtil.checkValid(getUsername())) {
 			addFieldError("username", getText("errors.username.required"));
 			valid = false;
 		}
-		if(getPassword().trim().length() == 0) {
+		if(!validatorUtil.checkValid(getPassword())) {
 			addFieldError("password", getText("errors.password.required"));
 			valid = false;
 		}

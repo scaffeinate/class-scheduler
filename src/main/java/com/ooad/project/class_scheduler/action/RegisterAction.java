@@ -4,6 +4,8 @@ import com.ooad.project.class_scheduler.bean.User;
 import com.ooad.project.class_scheduler.model.UserModel;
 import com.ooad.project.class_scheduler.util.EmailUtil;
 import com.ooad.project.class_scheduler.util.EncryptUtil;
+import com.ooad.project.class_scheduler.util.Validator;
+import com.ooad.project.class_scheduler.util.ValidatorUtil;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class RegisterAction extends ActionSupport {
@@ -17,6 +19,7 @@ public class RegisterAction extends ActionSupport {
 	password_confirmation, track, school;
 	private User user;
 	private UserModel userModel;
+	private ValidatorUtil validatorUtil;
 	
 	private EmailUtil emailUtil;
 	
@@ -24,6 +27,7 @@ public class RegisterAction extends ActionSupport {
 		user = new User();
 		userModel = new UserModel();
 		emailUtil = new EmailUtil();
+		validatorUtil = new ValidatorUtil(new Validator());
 	}
 	
 	public String execute() {
@@ -51,25 +55,25 @@ public class RegisterAction extends ActionSupport {
 	@Override
 	public void validate() {
 		// TODO Auto-generated method stub
-		if(getName().trim().length() == 0) {
+		if(!validatorUtil.checkValid(getName())) {
 			addFieldError("name", getText("errors.name.required"));
 		}
-		if(getEmail().trim().length() == 0) {
+		if(!validatorUtil.checkValid(getEmail())) {
 			addFieldError("email", getText("errors.email.required"));
 		}
-		if(getTrack().trim().length() == 0) {
+		if(!validatorUtil.checkValid(getTrack())) {
 			addFieldError("track", getText("errors.track.required"));
 		}
-		if(getSchool().trim().length() == 0) {
+		if(!validatorUtil.checkValid(getSchool())) {
 			addFieldError("school", getText("errors.school.required"));
 		}
-		if(getUsername().trim().length() == 0) {
+		if(!validatorUtil.checkValid(getUsername())) {
 			addFieldError("username", getText("errors.username.required"));
 		}
-		if(getPassword().trim().length() == 0) {
+		if(!validatorUtil.checkValid(getPassword())) {
 			addFieldError("password", getText("errors.password.required"));
 		}
-		if(getPassword_confirmation().trim().length() == 0) {
+		if(!validatorUtil.checkValid(getPassword_confirmation())) {
 			addFieldError("password_confirmation", getText("errors.password_confirmation.required"));
 		}
 	}
