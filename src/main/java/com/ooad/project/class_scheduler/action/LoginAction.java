@@ -1,11 +1,9 @@
 package com.ooad.project.class_scheduler.action;
 
 import java.util.Map;
-
 import org.apache.struts2.interceptor.SessionAware;
-
 import com.ooad.project.class_scheduler.bean.Session;
-import com.ooad.project.class_scheduler.model.UserModel;
+import com.ooad.project.class_scheduler.util.UserLoginFacade;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -13,26 +11,21 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	private static final long serialVersionUID = 1L;
 	private String username, password;
 	private Session sessionBean;
-	private UserModel userModel;
+	private UserLoginFacade userLoginFacade;
 	private Map<String, Object> session;
 	
 	public String execute() {
 		
 		sessionBean = new Session();
-		userModel = new UserModel();
 		sessionBean.setUsername(username);
 		sessionBean.setPassword(password);
+		userLoginFacade = new UserLoginFacade();
 		
-		if(userModel.checkCredentials(sessionBean) != null){
-			if(userModel.checkConfirmed(username)) {
-				session = ActionContext.getContext().getSession();
-				session.put("current_user", username);
-				session.put("login", true);
-				return SUCCESS;
-			} else {
-				addActionError(getText("errors.confirmation"));
-				return ERROR;
-			}
+		if(userLoginFacade.checkUser(sessionBean)){
+			session = ActionContext.getContext().getSession();
+			session.put("current_user", username);
+			session.put("login", true);
+			return SUCCESS;
 		} else {
 			addActionError(getText("errors.login"));
 			return ERROR;
