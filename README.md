@@ -10,6 +10,7 @@ Technologies Used:
 
 **Frontend:**
 - HTML5
+- JSP
 - CSS3
 - JQuery
 - Twitter Bootstrap
