@@ -44,3 +44,10 @@ For version control we have used Git which worked just awesome for us. We believ
 
 Screenshots:
 ------------
+![screenshot from 2014-12-03 13_05_33](https://cloud.githubusercontent.com/assets/1825853/5449011/ed79f626-84b1-11e4-9384-f04d71fcb23e.png)
+
+![screenshot from 2014-12-03 13_05_37](https://cloud.githubusercontent.com/assets/1825853/5449013/ed7f1cb4-84b1-11e4-85b5-222e601df3c0.png)
+
+![screenshot from 2014-12-03 13_05_45](https://cloud.githubusercontent.com/assets/1825853/5449012/ed7e27aa-84b1-11e4-9256-c236f8fc0ae5.png)
+
+![screenshot from 2014-12-03 13_05_53](https://cloud.githubusercontent.com/assets/1825853/5449002/abe26a2c-84b1-11e4-91f8-4d46c7db6cd2.png)
