@@ -18,6 +18,9 @@ Technologies Used:
 **Database:**
 - MySQL Server
 
+**Project Management:**
+- Maven
+
 Functionality:
 --------------
 The basic functionality of the application is to allow users resolve conflicts before selecting courses. The application flow is as follows:
